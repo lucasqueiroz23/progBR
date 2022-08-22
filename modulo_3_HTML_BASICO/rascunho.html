@@ -1,0 +1,96 @@
+<!DOCTYPE html> <!-- Esse elemento indica ao navegador que o documento é HTML5-->
+<!-- O documento html tem a seguinte estrutura:
+        <!DOCTYPE html>
+        <html>
+            <head>
+            <\head>
+            <body>
+            <\body>
+        <html>
+-->
+<html> <!-- O elemento 'html' indica onde começa e onde termina o documento html.-->
+    <head> <!-- O elemento 'head' contém metadados a respeito do documento.-->
+
+        <title>RASCUNHO</title> <!-- O elemento 'title' indica o título da página que fica na aba do navegador e aparece nos resultados de serviços de busca. -->
+        <meta charset="utf-8"> <!-- A tag 'meta' indica quais são os metadados do documento.
+                                    No caso, o atributo 'charset' indica que a decodificação utilizada deve ser a utf-8.
+        -->
+        
+    
+    </head>
+
+    <body> <!-- O elemento 'body' contém o conteúdo em si do documento.-->
+
+        <h1>Essa é minha tag h1.</h1> <!-- Os títulos dos conteúdos em html começam com h (de 'headline') seguido por um número de 1 a 6.
+                                           Quanto maior for o número, menor o tamanho do título. Além disso, existe o conceito de 'semântica'
+                                           em HTML, que diz o significado das tags. Existem tags que fazem a mesma coisa visualmente(ex: tags
+                                           'b' e 'strong'), mas que tem semânticas diferentes. No caso dos headlines, o h1 é sempre a headline
+                                           mais importante da página. 'h2' é menos importante do que h1 e assim por diante.-->
+            
+            <h2>Eis aqui um subtítulo.</h2>
+
+            <p>Esse é o primeiro parágrafo abaixo de h1.</p> <!-- O elemento 'p' indica um parágrafo.-->
+            <p>Esse é o <b>segundo</b> parágrafo.</p> <!-- A tag 'b' faz com que o conteúdo do elemento fique em negrito. 'b' vem do inglês 'bold'. -->
+            <p>Esse é o <strong>terceiro</strong>.</p> <!-- A tag 'strong' faz, visualmente, a mesma coisa que 'b'. No entanto, é semânticamente diferente:
+                                                            'strong' diz que o conteúdo não só é importante de ser destacado visualmente, mas existe, também,
+                                                            ênfase naquele conteúdo.-->
+            <p>Esse é o <i>quarto</i> parágrafo. E <em>isso é uma ênfase.</em></p> <!-- Novamente, 'i' deixa o conteúdo em itálico, mas
+                                                                                        'em' traz ênfase semântica.-->
+            <p><mark>Esse é o quinto. Ele está pintado de amarelo.</mark></p> <!-- A tag 'mark' faz uma marcação de texto. Visualmente, o texto parece que foi marcado
+                                                                                   com um marca-texto.-->
+            <p><small>Esse é um paragrafozinho.</small></p> <!-- A tag 'small' diminui o tamanho dos caracteres.-->
+            <p>Esse parágrafo contém uma palavra <sub>subscrita</sub>.</p> <!-- A tag 'sub' faz o texto ficar subscrito.-->
+            <p>Esse é o <b>2<sup>3</sup></b> parágrafo.</p> <!-- A tag 'sup' faz o texto ficar superescrito.-->
+            <p><del>Esse parágrafo foi cancelado.</del></p> <!-- A tag 'del', visualmente, risca o texto. Semanticamente, ela representa um texto que foi deletado.-->
+            <p>Esse é o 10º e <ins>último</ins> parágrafo.</p> <!-- A tag 'ins', visualmente, traça uma linha horizontal abaixo do texto. Semanticamente, 
+                                                                    ela indica que o texto foi adicionado. Seria o contrário da tag 'del'.-->
+            
+            <h2>Eu sou um novo subtítulo!</h2>
+            <p>
+                Esse parágrafo contém uma <br>
+                quebra de linha.
+                                                <!-- A tag 'br' faz uma quebra de linha.-->
+            </p>
+
+            <h3><a href="https://www.youtube.com">Clique aqui para ver uns vídeos!</a></h3> <!-- A tag 'a', de "anchor", cria um link. Ela tem um atributo
+                                                                                           'href' que recebe, como valor, o endereço do site linkado.-->
+            <h3><a href="auxPage.html">Clique aqui para acessar outra página que eu fiz!</a></h3> <!-- Nesse caso, o valor que href recebe é uma página dentro do domínio
+                                                                                                       atual, i.e., o localhost na porta específica.-->
+
+            <h2>Recomendação de série: (clique na imagem para assistir)</h2>
+
+            <a href="https://www.netflix.com/br/title/81002370">
+                <img alt="Logo da série Cobra Kai" 
+                src="https://dnm.nflximg.net/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABVRl9d6XYJG2esxn5HWSy9ql2JIo1HNnyocz9ZPylXx4ZaSgnRJJr5AnMno5NdHr5d-zs6VAbWcmjdjQCovLcNaYxUb_WsT3zi1mW1hTs702B0tdn8zp17EzP86ypZzqOF89cg.jpg?r=5ad">
+            </a>
+            <!-- A tag 'img' coloca uma imagem na tela. Ela recebe um atributo 'src' que indica a fonte da imagem. Essa fonte pode ser um link na internet ou uma imagem no domínio.-->
+
+            <h2>Recomendação de filme: (clique na imagem para ver o trailer)</h2>
+            <a href="https://www.youtube.com/watch?v=9Jgua93Xhcw">
+                <img alt="Logo do filme Top Gun: Maverick" 
+                height = "200" 
+                src="./imagens/Top_Gun_Maverick_logo.png">
+            </a>                                             <!-- O atributo 'height' dá a altura da imagem.
+                                                                  No entanto, a recomendação é não fazer esse
+                                                                  tipo de estilização no HTML, mas sim com CSS.-->
+            
+            <!-- Em ambas as imagens acima, existe o atributo 'alt'. Esse atributo só aparece se, por algum motivo, a imagem não carregar no browser. E ele é basicamente um texto que
+                 substitui a imagem. Daí o nome alt: é um texto alternativo à imagem, caso algum erro ocorra. -->
+            
+                 <!-- OBS: HIERARQUIA DE PASTAS
+                        - '.' indica que estamos na pasta atual.
+                          '..' indica que é a pasta um nível acima.-->
+
+            <h2>Recomendação de livro: (clique na imagem para comprar o livro)</h2>
+            <figure>
+                <a href="https://www.amazon.com.br/sil%C3%AAncio-dos-inocentes-Thomas-Harris/dp/850111362X/ref=asc_df_850111362X/?tag=googleshopp00-20&linkCode=df0&hvadid=379714637448&hvpos=&hvnetw=g&hvrand=17649480282404735179&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001541&hvtargid=pla-837130344914&psc=1">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/51p1stCQ8YL._SX335_BO1,204,203,200_.jpg">
+                </a>
+                <figcaption>O silêncio dos inocentes</figcaption>
+            </figure>
+            <!--A tag 'figure' encapsula uma 'img' e uma 'figcaption'. A figcaption é uma legenda da imagem. Diferentemente de um atributo 'alt',
+                a tag 'figcaption' aparece sempre.-->
+
+    </body>
+
+</html>
