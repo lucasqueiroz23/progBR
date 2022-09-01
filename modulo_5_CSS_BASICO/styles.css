@@ -1,0 +1,41 @@
+#inicio-pagina {
+    background-color: red;
+} 
+/* O '#' indica que o CSS vai buscar, no documento HTML, o elemento cuja id é o mesmo do nome que vem em seguida. */
+/* Sendo assim, é importante pensar que o 'id' é um identificador único. */ 
+
+.minha-classe{
+    background-color:pink;
+    color:hotpink;
+}
+/* o '.' indica que o CSS vai buscar, no documento HTML, os elementos cujo atributo 'class' é o mesmo do nome que vem em seguida. */ 
+/* Sendo assim, o 'class', como o nome diz, classifica os elementos HTML. */ 
+
+#preguica{
+    color: #FF0000; /* Esse #FF0000 está utilizando o conceito de RGB. Os dois primeiros */
+                      /* caracteres indicam o Red, os dois do meio indicam o Green e os */
+                      /* dois últimos indicam o blue.*/
+
+    background-color: rgb(190,200,255); /* o 'rgb' também utiliza, obviamente, o conceito de RGB.*/
+                                         /* Ele recebe, como parâmetros, os valores de R,G e B, nesta ordem, entre 0 e 255.*/
+}
+
+#duvida {
+    color: rgba(255,20,30,0.5); /* O rgba também usa o conceito de transparência. O 'a' indica a*/
+                                  /* transparência. Ele pode receber um valor entre 0 e 1, onde 0 é */
+                                  /* totalmente transparente e 1 é totalmente não-transparente.*/
+}
+
+#isso-e-so-um-teste{
+    background-image: url('./images/warriors.png');
+    background-repeat: no-repeat;
+    /* Todos os atributos 'background-...' podem ser feitos dentro de um 'background'. */ 
+    height:550px;
+    width:900px;
+    color:red;
+}
+/*
+body{
+    background-color:rgb(50,170,255);
+}
+*/
