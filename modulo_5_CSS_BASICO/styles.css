@@ -26,16 +26,44 @@
                                   /* totalmente transparente e 1 é totalmente não-transparente.*/
 }
 
-#isso-e-so-um-teste{
-    background-image: url('./images/warriors.png');
-    background-repeat: no-repeat;
-    /* Todos os atributos 'background-...' podem ser feitos dentro de um 'background'. */ 
-    height:550px;
-    width:900px;
-    color:red;
+.estudando-background1{
+    height: 100vh; /* Tamanho do elemento pertencente a esta classe */
+    width: 100vw; /*  Largura do elemento pertencente a esta classe */ 
+    /* background-color: aquamarine; Cor de fundo */
+    /* background-image: url('./images/warriors.png') /* Imagem de fundo */ 
+    background-color: lightgreen;
 }
-/*
+
 body{
-    background-color:rgb(50,170,255);
+    background-image: url('./images/warriors.png');
+    /* background-size:contain; */ /* Estica a imagem*/
+    /* background-size:auto; */ /* Repete a imagem */
+    /* background-size:cover; */ /* Imagem estica mas contem o elemento inteiro  */
+    background-repeat: no-repeat; /*imagem não se repete */
+    /* background-repeat:repeat-x; */ /* imagem se repete apenas nas abscissas */
+    /* background-repeat: repeat-y; */ /* imagem se repete apenas nas ordenadas */
+    /* background-repeat: repeat; */ /* imagem se repete em x e y */ 
+    /* background-position: top,left,right, bottom ; */ /* posiciona o background em um dos parametros descritos, sempre em relação ao elemento, no caso, body*/
+    /* background-attachment: fixed; */ /* "prende" o bg */
+    /* background: linear-gradient(to left,purple 27%,orange 55%,red 70%);*/  /*Linear gradient: faz um "degrade", direção é de acordo com o primeiro argumento,  */ 
+}   
+/* UNIDADES DE MEDIDA FIXAS
+ * cm
+ * mm
+ * in (polegada)
+ * *** OBS: USAR AS 3 ACIMA QUANDO O HTML FOR CONVERTIDO PARA PAPEL(PDF A4, POR EXEMPLO) *** 
+ * px (pixel)
+ * pt (ponto)
+ * pc (pica)
+ */
+
+ /* UNIDADES DE MEDIDA RELATIVAS
+  * vw: largura (width) relativa à viewport
+  * vh: altura (height) relativa à viewport
+  * qtd%: qtd é um inteiro, isso tudo indica que a classe(ou id) filha ocupará qtd% do elemento pai
+  */
+
+#foto-batman{
+    width:70vw;
+    height:70vh;
 }
-*/
