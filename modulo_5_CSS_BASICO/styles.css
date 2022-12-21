@@ -67,3 +67,23 @@ body{
     width:70vw;
     height:70vh;
 }
+
+#estudando-fontes {
+  font-size: 50px;
+}
+
+#fonte1 {
+  font-size: 100px; /* O atributo font-size dá um tamanho fixo para a fonte. */
+}
+
+#fonte2 {
+  font-size: 0.5em; /* O x"em" indica que a fonte vai ser x vezes o tamanho da fonte do componente pai. */
+}
+
+#fonte3 {
+  font-size: 6rem; /* O "rem" indica que a unidade de medida faz referência ao elemento raíz do documento html, isto é, a própria tag html. */
+}
+
+html {
+  font-size: 10px; /* No caso, todos os textos da página vão ter esse tamanho, a não ser que algo seja especificado. */
+}
