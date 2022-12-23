@@ -85,5 +85,5 @@ body{
 }
 
 html {
-  font-size: 10px; /* No caso, todos os textos da página vão ter esse tamanho, a não ser que algo seja especificado. */
+  font-size: 1em; /* No caso, todos os textos da página vão ter esse tamanho, a não ser que algo seja especificado. */
 }

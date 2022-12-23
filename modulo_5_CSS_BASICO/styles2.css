@@ -1,0 +1,40 @@
+h1 {
+  text-align: center; /* A propriedade text-align realiza o alinhamento do texto. */
+  text-transform: uppercase; /* A propriedade text-transform realiza um tipo de transformação no texto. No caso, o texto passa a ficar em caps. */
+}
+
+.lorem {
+  text-align: justify; /* Quando a propriedade text-align recebe justify, o texto torna-se justificado, ou seja, sem espaço entre as margens esquerda ou direita.*/
+  color: white;
+  font-size: 1.4rem;
+  line-height: 2rem; /* A propriedade line-height define o tamanho da distância entre uma linha e a linha imediatamente abaixo. */
+  text-indent: 5em; /* A propriedade text-indent realiza a indentação do texto. */
+}
+
+.decoration {
+  font-size: 3em;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline overline dotted; /* A propriedade text-decoration vai decorar o texto. Ela engloba outras propriedades.*/
+}
+
+#espacamento-letras {
+  font-size: 4rem;
+  letter-spacing: 5px; /* A propriedade letter-spacing realiza o espaçamento das letras, da esquerda para a direita. */
+}
+
+#espacamento-palavras {
+  font-size: 4rem;
+  word-spacing: 20px; /* A propriedade word-spacing realiza o espaçamento das palavras, da esquerda para a direita. */
+}
+
+#sombra {
+  font-size: 4rem;
+  text-align: center;
+  text-decoration: underline overline wavy purple;
+  text-shadow: white 5px 5px 10px; /*A propriedade text-shadow coloca uma sombra no texto. Ela recebe um offset-x, um offset-y e, opcionalmente, uma cor de sombreamento e um parâmetro de blur. */
+}
+
+body {
+  background-color: rgb(185, 36, 185);
+}
