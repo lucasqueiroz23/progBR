@@ -29,6 +29,7 @@ h1 {
 }
 
 #sombra {
+  line-height: 4em;
   font-size: 4rem;
   text-align: center;
   text-decoration: underline overline wavy purple;
@@ -37,4 +38,15 @@ h1 {
 
 body {
   background-color: rgb(185, 36, 185);
+}
+
+#fim-pagina {
+  text-align: center;
+  line-height: 2em;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none; /* Aqui, estou retirando o underline de todas as tag anchor. */
+  color: white;
 }

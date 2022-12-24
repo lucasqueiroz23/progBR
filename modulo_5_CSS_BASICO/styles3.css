@@ -1,0 +1,47 @@
+body {
+  background-color: black;
+}
+
+html {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px; /* A propriedade font-size dita o tamanho da fonte. */
+  font-family: Arial, Helvetica, sans-serif; /* A propriedade font-family diz a família da fonte. No caso, os argumentos tem uma ordem de prioridade. O primeiro argumento diz a fonte que o navegador deve tentar ler inicialmente. Caso ele não consiga lê-la, ele vai tentar ler a segunda e assim por diante. */
+}
+
+.nav {
+  color: red;
+  font-family:'Courier New', Courier, monospace; /* Caso a fonte tenha mais de uma palavra no nome, deve-se colocá-la entre aspas duplas ou simples. */
+  text-decoration: none;
+}
+
+.lorem {
+  font-weight: 600; /* O atributo font-weight diz o peso, i.e., a grossura da fonte. É como usar a tag <b>. Não interfere no HTML semântico. */
+  font-style: italic; /* O atributo font-style dá estilo para a fonte. No caso, é como a tag <i>. Também não tem nada a ver com o HTML semântico. */
+  font-variant: small-caps; /* O atributo font-variant traz estilos variantes para a fonte. No caso, todas as letras minúsculas ficam em caps, embora ainda sejam menores do que as maiúsculas. */
+  font-size: 30px;
+}
+
+/* Se eu quiser usar uma fonte que não faz parte das fontes padrão, devo seguir o seguinte passo-a-passo:
+   1 - Baixar a fonte em um dos formatos: ttf,otf,woff,svg,eot;
+   OBS: Checar a suportabilidade dos formatos em cada navegador.
+   
+   2 - Salvar a fonte no projeto.
+   3 - No css, usar @font-face. Nele deve existir uma propriedade font-famiy que vai especificar o nome da fonte e uma propriedade
+       src que vai dizer o caminho da fonte, ou seja, onde a fonte está localizada.
+   4 - Após isso, basta chamar a fonte da mesma maneira de sempre.
+*/
+@font-face {
+  font-family: PressStart2P;
+  src: url('./PressStart2P-Regular.ttf');
+}
+
+#fonte-custom {
+  text-align: center;
+  font-family: 'PressStart2P'; /* Chamando a fonte 'criada' logo acima.*/
+  font-size: 30px;
+  color: yellow;
+}
