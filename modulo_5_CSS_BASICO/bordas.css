@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(18, 52, 204);
+}
+
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('./PressStart2P-Regular.ttf');
+}
+
+h1 {
+  text-align: center;
+  font-family: 'PressStart2P';
+  font-size: 50px;
+  color: white;
+}
+
+#titulo {
+  border-style: dotted; /* A propriedade border-style dá estilo à borda. */
+  border-width: 5px; /* A propriedade border-width define a grossura da borda. */
+  border-color: white; /* A propriedade border-color define a cor da borda. */ 
+}
+
+#background_1 {
+  height: 500px;
+  background-color: white;
+  border-style: solid;
+  border-color: red;
+  border-width: 20px;
+  border-radius: 20px; /* A propriedade border-radius define a circunferência da borda.*/
+}
+
+#background_2 {
+  height: 500px;
+  border-width: 20px;
+  background-color: orange;
+  border-style: solid;
+  border-color: green;
+}
+
+.nav {
+  font-family: 'PressStart2P';
+  color: orange;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.3em;
+  font-variant: small-caps;
+}
