@@ -1,0 +1,78 @@
+@font-face {
+  font-family:'PressStart2P';
+  src: url('./PressStart2P-Regular.ttf');
+}
+
+body {
+  font-size: 30px;
+  background-color: orange;
+  color: white;
+  margin: 0;
+  padding: 0; /* Caso queira ter total controle do margin e do padding, basta colocar, no body, margin e padding = 0. */  
+}
+
+h1 {
+  text-align: center;
+  font-family: 'PressStart2P';
+  font-size:0.8em;
+  text-shadow: 10px 10px 5px gray;
+  color: black;
+}
+
+#margin {
+  margin-left:600px;
+  width:600px;
+  height:600px;
+  background-color:red;
+  margin-bottom: 100px;
+}
+
+#border {
+  width: 500px;
+  height:500px;
+  margin-left:50px;
+  margin-top: 20px;
+  background-color: blue;
+}
+
+#padding {
+  width: 400px;
+  height:400px;
+  background-color:purple;
+  margin-left:48px;
+  margin-top: 16px;
+}
+
+#elemento {
+  width: 300px;
+  height: 300px;
+  margin-left:46px;
+  margin-top:12px;
+  background-color:black;
+}
+
+#primeira {
+  background-color:red;
+  color:black;
+  height: 300px;
+  width: 300px;
+  margin-left:600px;
+  margin-bottom: 10px;
+  border-color: white;
+  border-style: solid;
+  border-width:70px; /* O width do elemento é alterado.*/
+  box-sizing: content-box;
+}
+
+#segunda {
+  background-color:blue;
+  color:black;
+  height: 300px;
+  width: 300px;
+  margin-left:600px;
+  margin-bottom: 10px;
+  border-color:white;
+  border-style: solid;
+  border-width:70px; /* O width do elemento não é alterado.*/
+  box-sizing: border-box;
+}

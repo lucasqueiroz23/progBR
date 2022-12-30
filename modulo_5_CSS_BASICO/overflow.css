@@ -1,0 +1,16 @@
+body {
+  background-color:black;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+#overflow {
+  overflow: scroll; /* Uma das formas de lidar com o overflow é usando um scroll.*/
+  overflow-x: hidden; /*O overflow pode ser escondido.*/
+  width:200px;
+  height:200px;
+  background-color:gray;
+}

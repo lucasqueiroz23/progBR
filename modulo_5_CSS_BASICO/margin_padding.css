@@ -39,3 +39,9 @@ h1 {
   background-color: green;
   height: 100px;
 }
+
+.nav {
+  font-family:'PressStart2P';
+  text-decoration: none;
+  margin-right: 50px;
+}
