@@ -1,0 +1,108 @@
+@font-face {
+  font-family:'PressStart2P';
+  src: url('./PressStart2P-Regular.ttf');
+}
+
+body {
+  background-color: black;
+  color:white;
+}
+
+h1 {
+  font-family: 'PressStart2P';
+  text-transform: uppercase;
+  color:cadetblue;
+  text-align: center;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.header {
+  font-family:'PressStart2p';
+  margin-bottom: 40px;
+}
+
+#links {
+  font-family: monospace;
+  text-align: justify;
+  margin-bottom: 50px;
+}
+
+a {
+  background-color:aquamarine;
+  color:red; /* A cor do link já não é mais azul*/
+  text-decoration: none; /*O link já não tem mais o underline*/
+  padding: 30px; /* O padding faz com que a tag se expanda, parecendo um botão.*/
+  text-transform: uppercase;
+  font-family: 'PressStart2p';
+  margin-right:100px;
+  border-radius:5px;
+}
+
+/*Pseudo-classe. Toda vez que o usuário passar com o mouse em qualquer link, a tag vai herdar o que quer que seja da tag <a>,
+  mas dando prioridade para o que estiver aqui dentro.
+ */
+a:hover {
+  padding:40px;
+  color: white;
+  background-color:pink;
+}
+
+/*Pseudo-classe. Ocorre toda vez que o link já foi visitado.*/
+a:visited {
+  color: black;
+  background-color:white;
+}
+
+/*Pseudo-classe. Ocorre quando o usuário está clicando no link.*/
+a:active{
+  color: purple;
+  background-color: gray;
+}
+
+ul {
+  border-style: solid;
+  border-color: red;
+  border-width:1px;
+  color: black;
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: monospace;
+  background-color: white;
+  padding: 30px;
+  list-style: none; /*List-style modifica o marcador.*/
+  border-radius:5px;
+}
+
+li{
+  cursor:progress; /*A propriedade cursor estiliza o cursor do usuário ao fazer o hover por aquele elemento.*/
+  border-style: solid;
+  border-color: black;
+  font-size: 30px;
+  border-width:1px;
+  border-radius:10px;
+  background-color: rgb(104, 103, 103);
+  margin: 10px;
+  padding: 10px;
+  list-style-position: inside; /*List-style position diz onde o marcador fica. Se for inside, é dentro do elemento. Se for outside(padrão), fica no padding.*/
+}
+
+ol {
+  text-transform: uppercase;
+  border-style: solid;
+  border-color: red;
+  border-width:1px;
+  background-color: white;
+  font-size: 60px;
+  color: black;
+  padding:30px;
+  border-radius:5px;
+  font-family: monospace;
+  text-align:center;
+  list-style: upper-roman;
+}
+
+li:hover {
+  background-color: red;
+}
