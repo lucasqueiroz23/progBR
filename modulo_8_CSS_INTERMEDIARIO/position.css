@@ -1,0 +1,64 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#topbar {
+  background-color: red;  
+  height: 3em;
+  padding: 1em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+#quadro {
+  /* Posição relativa apenas para testar a posição absoluta.*/
+  position: relative;
+  margin: auto;
+  width:500px;
+  height: 500px;
+  border-style:solid;
+}
+
+.quadrado {
+  width: 100px;
+  height: 100px;
+}
+
+.quad-red {
+  background-color:red;
+}
+.quad-blue {
+  /* O 'position: relative' faz com que o posicionamento do elemento passe a ser relativo ao seu posicionamento padrão.
+     Perceba que, diferentemente de usar margin, os elementos ao redor do elemento em questão não tem seus respectivos posicionamentos afetados.*/
+  
+  /* Além disso, a margem também é relativa ao elemento em sua posição natural. Para observar isso, descomente a linha abaixo.*/
+  /*margin-top: 100px;*/
+  position: relative;
+  left:40%;
+  top:10%;
+  background-color:blue;
+}
+.quad-green {
+  background-color:green;
+  /*A posição absoluta faz com que o elemento tenha a posição relativa à posição em que ele deveria estar, mas com a consequência de que
+    os outros elementos não são mais posicionados em relação a ele. 
+    Caso queira fazer com que a posição absoluta de um elemento seja em relação a um container(elemento pai), o position do elemento pai 
+    deve ser diferente de static. */
+  position: absolute;
+  right: 0;
+}
+
+.quad-black{
+  background-color:black;
+}
+
+.quad-pink {
+  background-color:pink;
+}
