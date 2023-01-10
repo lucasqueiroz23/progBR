@@ -22,7 +22,7 @@ h1 {
   position: relative;
   margin: auto;
   width:500px;
-  height: 500px;
+  height: 1000px;
   border-style:solid;
 }
 
@@ -33,6 +33,10 @@ h1 {
 
 .quad-red {
   background-color:red;
+  /* O position: fixed faz com que o elemento fique posicionado em relação à viewport.
+     Perceba que, ao mudar o tamanho da tela, o quadrado vermelho não muda de lugar(relativamente à viewport).*/
+  position: fixed;
+  left: 1em;
 }
 .quad-blue {
   /* O 'position: relative' faz com que o posicionamento do elemento passe a ser relativo ao seu posicionamento padrão.
@@ -42,7 +46,7 @@ h1 {
   /*margin-top: 100px;*/
   position: relative;
   left:40%;
-  top:10%;
+  top:60%;
   background-color:blue;
 }
 .quad-green {
@@ -52,13 +56,29 @@ h1 {
     Caso queira fazer com que a posição absoluta de um elemento seja em relação a um container(elemento pai), o position do elemento pai 
     deve ser diferente de static. */
   position: absolute;
-  right: 0;
+  top:70%;
 }
 
 .quad-black{
+  /* O position 'sticky' faz com que o elemento fique posicionado normalmente em relação ao seu posicionamento natural. No entanto,
+     deve-se definir um offset da viewport. Quando esse offset for atingido, então o elemento passa a ficar 'fixed'. No caso, o 
+     offset é o 'top'. */
   background-color:black;
+  position:sticky;
+  top:100px;
+  width: 100%
 }
 
 .quad-pink {
   background-color:pink;
+  /* A propriedade 'float' faz com que o elemento fique posicionado ao extremo esquerdo ou direito do seu container. Os elementos em linha
+     serão posicionados ao seu redor. */
+  float:left;
+}
+
+.texto-quad {
+  color: white;
+  position: absolute;
+  top:40%;
+  left:10%;
 }
