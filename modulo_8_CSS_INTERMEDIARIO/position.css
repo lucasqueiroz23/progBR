@@ -22,7 +22,7 @@ h1 {
   position: relative;
   margin: auto;
   width:500px;
-  height: 1000px;
+  height: 1200px;
   border-style:solid;
 }
 
@@ -65,7 +65,7 @@ h1 {
      offset é o 'top'. */
   background-color:black;
   position:sticky;
-  top:100px;
+  top:0;
   width: 100%
 }
 
@@ -81,4 +81,40 @@ h1 {
   position: absolute;
   top:40%;
   left:10%;
+}
+
+/* Isso aqui se chama Media Query. Basicamente, o que isso aqui faz é adaptar os elementos especificados para o tamanho da tela especificado.
+   Existe o conceito de 'mobile first', em que o css é feito pensando no mobile e os media querys são feitos para tamanhos maiores, ou seja, 
+   tamanhos de tela menores são priorizados. 
+   
+   Os elementos especificados no Media Query herdam tudo aquilo que é geral. Mas o que for específico é prioritário para aquele tamanho de tela.
+   Esses exemplos ainda não estão 100%, mas é só um contato inicial.
+
+   OBS: a ordem em que os media queries aparecem importa.
+   */
+@media screen and (max-width:900px){
+  h1 {
+    font-size:2rem;
+  }
+  #quadro {
+    width:500px;
+    font-size:2em;
+  }
+  #quadrado {
+    overflow:scroll;
+    width: 50px;
+    height:50px;
+  }
+}
+@media screen and (max-width:450px){
+  h1 {
+    font-size:1.5rem;
+  }
+  #quadro {
+    width:300px;
+  }
+  #quadrado {
+    width: 50px;
+    height:50px;
+  }
 }
