@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMS</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <h1>Aprendendo sobre formulários</h1>
+  <!-- A tag form engloba todos os campos do formulário. 
+       O atributo 'method' indica o método HTTP, podendo ser GET ou POST. Também tem o 
+       'dialog', mas isso fica mais pra frente.
+      
+       O atributo 'action' indica a url que vai receber o resultado do formulário.-->
+  <form method="get" action="https://youtube.com/results" target="_blank">
+    <!-- A tag input é uma entrada de usuário que pode ser de vários tipos.
+         Em um form com método GET, cada um dos atributos 'name' indica uma query da querystring. -->
+    <input type="text" name="search_query">
+    <input type="submit">
+  </form>
+</body>
+</html>
