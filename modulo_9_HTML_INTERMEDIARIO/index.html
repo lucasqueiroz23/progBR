@@ -4,21 +4,99 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FORMS</title>
+  <title>HTML INTERMEDIÁRIO</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <h1>Aprendendo sobre formulários</h1>
-  <!-- A tag form engloba todos os campos do formulário. 
+  <!-- A tag 'header' é semântica.-->
+  <header>
+    <h1>HTML INTERMEDIÁRIO</h1>
+  </header>
+
+  <section>
+    <h2>Faça uma busca no youtube.</h2>
+    <!-- A tag form engloba todos os campos do formulário. 
        O atributo 'method' indica o método HTTP, podendo ser GET ou POST. Também tem o 
        'dialog', mas isso fica mais pra frente.
       
-       O atributo 'action' indica a url que vai receber o resultado do formulário.-->
-  <form method="get" action="https://youtube.com/results" target="_blank">
-    <!-- A tag input é uma entrada de usuário que pode ser de vários tipos.
-         Em um form com método GET, cada um dos atributos 'name' indica uma query da querystring. -->
-    <input type="text" name="search_query">
-    <input type="submit">
-  </form>
+       O atributo 'action' indica a url que vai receber o resultado do formulário.
+    -->
+    <form method="get" action="https://www.youtube.com/results" target="_blank">
+      <!-- A tag 'input' é uma entrada de usuário que pode ser de vários tipos.
+           Em um form com método GET, cada um dos atributos 'name' indica uma query da querystring. 
+      -->
+      <input type="text" name="search_query">
+      <input type="password" name="senha">
+      <!-- No type 'radio', para que dois radio's sejam mutuamente exclusivos, o atributo 'name' deve ser igual pros dois. -->
+      <!-- Nos types 'radio' e 'checkbox', para que um elemento, por padrão, esteja ligado, basta usar o atributo 'checked'. -->
+      <input type="radio" checked name="data" value="novo">Vídeo novo
+      <input type="radio" name="data" value="antigo">Vídeo antigo
+      <!-- No type 'checkbox', para dois elementos com atributo 'name' iguais, use o atributo 'value' para identificá-los. -->
+      <input type="checkbox" name="canal" value="progbr">Progbr
+      <input type="checkbox" name="canal" value="lucas montano">Lucas Montano
+      <!-- Para que types 'reset' e 'submit' tenham o texto diferente do padrão, basta colocar o texto desejado no campo 'value'.-->
+      <input type="reset" value="Limpar campos">
+      <input type="submit" value="Pesquisar">
+    </form>
+  </section>
+
+  <section>
+    <h2>Faça uma busca no localhost.</h2>
+    <form method="get" action="/linguagens" target="_blank">
+      <!-- A tag 'select', assim como input radio e input checkbox, serve para, dado uma lista de itens, selecionar um ou mais. -->
+      <!-- Por padrão, funciona como se fosse um radio, mas basta colocar o atributo 'multiple' para que funcione como um checkbox.-->
+      <select name="linguagem" >
+        <!-- O elemento 'option' indica cada uma das opções de um select. Para que uma opção, por padrão, esteja selecionada, basta 
+             utilizar o atributo 'selected'. -->
+        <option value="C">C</option>
+        <option value="javascript" selected>Javascript</option>
+        <option value="python">Python</option>
+      </select>
+      outras linguagens:
+      <!-- O elemento 'textarea' é igual ao elemento 'input' com type text, com a diferença de que o tamanho da caixa é maleável.-->
+      <textarea name="linguagem" style="min-width:100px;max-width:100px"></textarea>
+      <input type="submit" value="Pesquisar">
+    </form>
+  </section>
+
+  <!-- Com o HTML5, novos elementos surgiram. No entanto, nem sempre os navegadores acompanhavam a evolução da tecnologia. Vamos ver, agora,
+       algumas tags novas. Mas é importante saber que nem todos os navegadores e versões dão suporte a essas tags. -->
+  <section>
+    <h2>Inputs HTML5</h2>
+    <form action="/inputs" target="_blank" method="get">
+      <input type="color" name="cor" value="#aaaaaa">
+      <input type="date" name="calendario" min="2022-01-01" max="2023-01-13">
+      <input type="datetime-local" name="dia_hora">
+      <!-- O type 'file' deve ser usado com o método POST! Não tem muito sentido utilizar com o método GET.-->
+      <input type="file" name="arquivo">
+      <input type="number" name="numero" min="0" max="10">
+      <input type="range" name="intervalo" min="0" max="100" value="37">
+      <input type="tel" name="telefone">
+      <input type="email" name="email">
+      <input type="reset">
+      <input type="submit">
+    </form>
+  </section>
+
+  <section>
+    <h2>TAGS SEMÂNTICAS</h2>
+    <article>
+      <ul>
+        <li>header</li>
+        <li>nav</li>
+        <li>footer</li>
+        <li>main</li>
+        <li>section</li>
+        <li>article</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- A tag 'footer' é semântica.-->
+  <footer>
+    <div id="contato">
+      Contato: <a href="mailto:lucas.fn4@gmail.com">lucas.fn4@gmail.com</a>
+    </div>
+  </footer>
 </body>
 </html>
