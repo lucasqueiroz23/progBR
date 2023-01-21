@@ -64,3 +64,118 @@ for(const pessoa of pessoas){
     console.log(`${key}: ${pessoa[key]}`);
   }
 }
+
+// no Javascript, funções podem ser guardadas em variáveis.
+const foo = function(str){
+  return str;
+}
+
+// vai printar a função, no caso, ela mesmo, não o valor de retorno.
+console.log(foo);
+
+// vai printar o retorno da função.
+console.log(foo('bar'));
+
+// outro exemplo: declaração de função e, depois, atribuição do valor da função em uma variável.
+
+function printTo(num){
+  for(let i = 1; i <= num; i++)
+    console.log(i);
+}
+
+// chamar xpto é a mesma coisa que chamar printTo
+const xpto = printTo;
+console.log(xpto);
+console.log(xpto(10));
+
+// no Javascript, as propriedades de um objeto podem ser acessadas de duas formas:
+const carro = {
+  marca:'Ferrari',
+  ano:2023,
+};
+
+// primeira forma: objeto.propriedade
+console.log(carro.ano);
+// segunda forma: objeto['propriedade']
+console.log(carro['ano']);
+
+// além disso, eu posso adicionar propriedades em um objeto que não estavam em sua declaração inicial.
+
+carro.dono = 'Lucas';
+console.log(carro.dono);
+
+// no entanto, não conseguimos adicionar e/ou acessar chaves numéricas usando a forma objeto.chave.
+// Precisamos, nesse caso, usar objeto['chave'].
+
+// carro.10 = 10; dá erro
+
+carro['10'] = 100;
+console.log(carro['10']);
+
+// também conseguimos criar um nome para a propriedade usando uma variável.
+const newProp = 'Preco';
+
+carro[newProp] = 'caro pra dedéu';
+
+// perceba que o nome da chave não é 'newProp', mas sim 'preço'.
+console.log(carro);
+
+// ou seja: a chave é uma string.
+carro.newProp = 'novaProp';
+console.log(carro);
+
+// outra forma de criar um objeto: instanciando a classe Object.
+const musica = new Object();
+
+musica.nome = "Sweet Child O' Mine";
+musica.banda = "Guns N' Roses";
+
+console.log(musica);
+
+// perceba que o this aponta pro objeto que chamou a função nas linhas abaixo.
+function media(){
+  return (this.notaP1+this.notaP2)/2;
+}
+
+const aluno = {
+  nome: 'Joao',
+  notaP1: 4,
+  notaP2: 9,
+  // perceba que mediaProvas é uma chave que recebe uma função. 
+  mediaProvas: media
+}
+
+console.log(aluno.mediaProvas());
+
+// no javascript, diferentemente do typescript, não temos formas de tipar um objeto. Então, para 
+// criar objetos iguais, uma forma de se fazer é utilizando funções:
+
+function criarAluno(nome, notaP1,notaP2){
+  return {
+    nome: nome,
+    notaP1: notaP1,
+    notaP2: notaP2,
+    mediaProvas: media
+  }
+}
+
+const turma = [
+  criarAluno('joao',10,10),
+  criarAluno('edson',5,5),
+]
+
+console.log(turma);
+
+for(const aluno of turma){
+  console.log(aluno.mediaProvas());
+}
+
+// também podemos fazer a mesma coisa utilizando a keyword this.
+
+function music(nome, banda){
+  this.nome = nome;
+  this.banda = banda;
+  //perceba que a função não retorna nada. Para que isso crie, de fato, um objeto, deve-se instanciar utilizando o new.
+}
+
+console.log(new music('Back in Black', 'ACDC'));
