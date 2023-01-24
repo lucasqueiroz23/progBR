@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <!-- No HTML, um elemento pode ter o atributo onclick. Esse atributo é um evento que acontece quando o usuário clica no elemento em questão. -->
+  <div id="button" onclick="adicionarH1()">
+    Clique em mim!
+  </div>
 
+  <!-- O atributo onchange, em um input, faz com que, ao mudar o valor do input e retirar o foco dele, o javascript aconteça.-->
+  <!-- No HTML, o this é exatamente o elemento.-->
+  <input id="input" onchange="mudarH1(this)">
+  <!-- O atributo oninput faz com que a função seja chamada toda vez que o input mudar, mesmo se perder ou não o foco-->
+  <input oninput="mudarH1(this)">
 </body>
-</html>
+</html> 

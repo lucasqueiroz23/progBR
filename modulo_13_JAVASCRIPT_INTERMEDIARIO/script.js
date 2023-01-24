@@ -44,6 +44,9 @@ console.log(document.title.toUpperCase());
 
 /* O innerHTML de um objeto é, exatamente, o texto em html. */
 function adicionarH1(str='Ola, mundo!'){
+  const h1 = document.getElementById('titulo');
+  if(!!h1)
+    return;
   document.body.innerHTML += `<h1 id="titulo">${str}</h1>`;
 }
 
@@ -97,3 +100,9 @@ function toggleValoresH1(att){
   h1.setAttribute(att, text);
 }
 
+function mudarH1(input){
+  const h1 = document.getElementById('titulo');
+  if(!h1 && !input)
+    return;
+  h1.innerText = input.value != '' ? input.value : 'Ola, mundo!';
+}
