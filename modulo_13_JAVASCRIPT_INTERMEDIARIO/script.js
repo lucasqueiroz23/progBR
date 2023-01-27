@@ -125,4 +125,90 @@ function inserirTexto(){
 
 function retirarTexto(){
   this.value = '';
+  console.log(this);
 }
+
+/* 
+  SOBRE O OPERADOR THIS
+  O 'this' varia dependendo se estamos falando de classes, funções ou num script global.
+  Em funções, o this sempre vai fazer referência ao objeto que está chamando a função.
+  OBS: não é o objeto que tem a função como propriedade, mas sim o objeto que está chamando a função! 
+  Exemplo:
+*/
+function getThis(){
+  return this;
+};
+
+const testObj = {
+  name: 'foo',
+  getThis: getThis,
+}
+
+const xpto = {
+  x: 'pto',
+  getThis(){
+    return this;
+  }
+}
+
+const novoObj = {age: 300, getThis: xpto.getThis};
+
+console.log(testObj.getThis()); // vai printar {name: 'foo', getThis: f}, pois, nesse caso, this se refere ao objeto que chama a função
+console.log(xpto.getThis()); // vai printar o objeto xpto.
+console.log(novoObj.getThis()); // perceba que o método getThis de novoObj recebe, por atribuição, o getThis de xpto. No entanto,
+                                // o objeto que está chamando getThis é novoObj, portanto, o this é o próprio objeto novoObj.
+
+/* 
+  NO ENTANTO, O COMPORTAMENTO MUDA QUANDO USAMOS ARROW FUNCTIONS.
+*/
+const globalThis = this; // objeto window
+
+const obterThis = () => this; // esse this é o globalThis, ou seja, o objeto window.
+
+const teste2 = {
+  name: 'bar',
+  obterThis: obterThis,
+}
+
+const teste3 = {
+  name: 'nobodyyesdoor',
+  returnThis: () => this,
+}
+
+
+console.log(teste2.obterThis()); // ele printa o objeto window!
+console.log(teste3.returnThis()); // também printa o objeto window!
+
+/// portanto, não use arrow functions como métodos de objetos!
+// existem mais detalhes sobre o this, mas, por enquanto, isso basta!
+
+/* 
+  ACESSANDO ELEMENTOS FILHOS 
+  Para acessar os elementos filhos de um elemento HTML, basta usar a propriedade children, que retorna uma lista com todos os filhos.
+
+  ACESSANDO ELEMENTOS PAIS
+  Para acessar os elementos pais de um elemento HTML, basta usar a propriedade parentElement, que retorna o elemento pai.
+*/
+
+const exemplo = document.getElementById('xpto');
+const filhosExemplo = exemplo.children
+
+console.log(filhosExemplo); // retorna [h2, p]
+console.log(filhosExemplo[0].parentElement); // retorna a div com id = 'xpto'
+
+/* 
+  O OBJETO JSON serve para pegar um objeto e transformá-la numa string ou fazer o contrário.
+  A função stringify transforma o objeto numa string, e a função parse transforma uma string num objeto.
+  É importante notar que, no caso da função parse, a string deve ter cada chave entre parenteses.
+*/
+
+const newObj = {
+  name: 'lucas',
+  curso: 'engenharia de software'
+}
+
+// perceba que só a chave precisa estar entre aspas duplas. O elemento só precisa estar entre aspas duplas se seu tipo for string.
+const strToJSON = '{"name": "sofia", "curso": "fisioterapia", "idade": 21, "estudando": true}'
+
+console.log(JSON.stringify(newObj)); // printa o objeto em formato de string
+console.log(JSON.parse(strToJSON)); // printa a string em formato de objeto

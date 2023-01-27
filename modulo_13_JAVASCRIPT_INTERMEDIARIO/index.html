@@ -19,7 +19,11 @@
   <!-- O atributo oninput faz com que a função seja chamada toda vez que o input mudar, mesmo se perder ou não o foco-->
   <input oninput="mudarH1(this)">
 
-  <p id="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque deleniti reiciendis molestias ducimus, iusto, corrupti quae aut fugiat, alias explicabo dicta voluptates modi dolorum esse! Incidunt optio pariatur soluta amet?</p>
+  <div id="xpto">
+    <h2>xpto</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit suscipit quam vel placeat eaque repellendus illum doloremque quos eligendi delectus, impedit, aliquam sed voluptatum? Placeat commodi dignissimos fuga vitae ea.</p>
+  </div>
+
   <!-- Perceba que o elemento script está no final do body. Isso ocorre porque existem, por exemplo, eventListeners nele.
        Mas eles sempre vão dar errado, pois, quando a script está na head, os eventos estão sendo captados para elementos
        que ainda não foram renderizados na tela. Uma forma de manter a tag script no head é colocar toda a lógica dentro de uma função
