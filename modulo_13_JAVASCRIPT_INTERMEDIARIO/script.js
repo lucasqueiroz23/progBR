@@ -212,3 +212,8 @@ const strToJSON = '{"name": "sofia", "curso": "fisioterapia", "idade": 21, "estu
 
 console.log(JSON.stringify(newObj)); // printa o objeto em formato de string
 console.log(JSON.parse(strToJSON)); // printa a string em formato de objeto
+
+/*
+  STORAGE: LOCAL E SESSION
+  MÉTODOS: getIte, setItem, removeItem, clear
+*/
