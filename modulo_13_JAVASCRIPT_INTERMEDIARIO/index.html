@@ -3,12 +3,13 @@
 <head>
   <title>Javascript Intermediário</title>
   <meta charset="utf-8">
-  <script src="./script.js"></script>
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<!-- O evento 'load' é ativado sempre que o objeto é carregado.-->
+<body onload="console.log('Hello, world!')">
   <!-- No HTML, um elemento pode ter o atributo onclick. Esse atributo é um evento que acontece quando o usuário clica no elemento em questão. -->
-  <div id="button" onclick="adicionarH1()">
+  <!-- O evento 'onmouseover' existe também, além do 'onmouseout'-->
+  <div id="button" onclick="adicionarH1()" onmouseover="trocarCorDeFundo()" onmouseout="trocarCorDeFundo('white')">
     Clique em mim!
   </div>
 
@@ -17,5 +18,14 @@
   <input id="input" onchange="mudarH1(this)">
   <!-- O atributo oninput faz com que a função seja chamada toda vez que o input mudar, mesmo se perder ou não o foco-->
   <input oninput="mudarH1(this)">
+
+  <p id="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque deleniti reiciendis molestias ducimus, iusto, corrupti quae aut fugiat, alias explicabo dicta voluptates modi dolorum esse! Incidunt optio pariatur soluta amet?</p>
+  <!-- Perceba que o elemento script está no final do body. Isso ocorre porque existem, por exemplo, eventListeners nele.
+       Mas eles sempre vão dar errado, pois, quando a script está na head, os eventos estão sendo captados para elementos
+       que ainda não foram renderizados na tela. Uma forma de manter a tag script no head é colocar toda a lógica dentro de uma função
+       que só será chamado no onload do elemento body. 
+       Também, dentro da script, pode ser chamada a 'document.addEventListener('DOMContentLoaded',()=>{...}) que só roda depois que o conteúdo da DOM
+       for carregado. -->
+  <script src="./script.js"></script>
 </body>
 </html> 

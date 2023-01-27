@@ -106,3 +106,23 @@ function mudarH1(input){
     return;
   h1.innerText = input.value != '' ? input.value : 'Ola, mundo!';
 }
+
+function trocarCorDeFundo(novaCor = 'black'){
+  document.body.style.backgroundColor = novaCor;
+}
+
+// Existe uma forma de captar eventos. A forma é: objeto.addEventListener(evento, função que é acionada quando o evento ocorre.)
+
+const input = document.getElementById('input');
+// as funções javascript também são variáveis. No exemplo abaixo, estou mandando exatamente a função que é acionada quando o evento ocorre.
+// Se eu colocasse parênteses, eu estaria chamando a função.
+input.addEventListener('mouseover', inserirTexto);
+input.addEventListener('mouseout', retirarTexto);
+
+function inserirTexto(){
+  this.value = 'lorem ipsum';
+}
+
+function retirarTexto(){
+  this.value = '';
+}
